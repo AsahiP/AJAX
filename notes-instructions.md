@@ -29,17 +29,18 @@ There is already a route in the Flask server for this, at /fortune. It returns j
 
 Fill in the function in the JavaScript file to load the text returned by this route and put it into the #fortune-text div. You’ll use the $.get() method. (If needed, refer to the lecture notes for a good example.)
 
-Part 2: Weather
+### Part 2: Weather ###
 We want the user to be able to type in a zipcode and get a forecast back for that zipcode.
 
 There is already a route in the Flask server, /weather, that returns a JSON object like this:
 
 {temp: TEMP, forecast: FORECAST}
+
 We don’t want to actually show the temperature on the page, though, just the forecast. This is a common pattern: APIs tend to return a lot of data, and we only want to show some.
 
 Fill in the missing parts of the function in the JavaScript file. You’ll need to decide which kind of AJAX call to make, and how to extract the forecast from the JSON object you get back.
 
-Part 3: Ordering Melons
+### Part 3: Ordering Melons ###
 We want the users to be able to order melons using an AJAX-style form.
 
 There is already a route in the Flask server, /order-melons, to handle processing the data. It returns a JSON object with a status code and a text message.

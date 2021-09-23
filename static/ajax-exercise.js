@@ -17,6 +17,10 @@ $('#get-fortune-button').on('click', showFortune);
 
 // PART 2: SHOW WEATHER
 
+// $( "form" ).on( "submit", function( event ) {
+//   event.preventDefault();
+//   console.log( $( this ).serialize() );
+// });
 
 function showWeather(evt) {
   evt.preventDefault();
@@ -32,8 +36,7 @@ function showWeather(evt) {
     alert(`${res.temp}`);
     alert(`${res.forecast}`);
     
-  } 
-    )
+  });
 
   // TODO: request weather with that URL and show the forecast in #weather-info
 }
@@ -43,12 +46,6 @@ $('#weather-form').on('submit', showWeather);
 // PART 3: ORDER MELONS
 
 // Show the result’s message text in the #order-status div.
-
-// const formInputs = {
-//   type: $('#type-field').val(),
-//   amount: $('#amount-field').val(),
-// };
-
 
 function orderMelons(evt) {
   evt.preventDefault();
@@ -65,14 +62,27 @@ function orderMelons(evt) {
     alert(res.msg);
   });
 
-  // $.post('/new-order', formInputs, res => {
-  //   alert(res);
-
   // TODO: show the result message after your form
   // TODO: if the result code is ERROR, make it show up in red (see our CSS!)
 }
 
 $('#order-form').on('submit', orderMelons);
 
+// .serialize()
+// $( "input, textarea, select" ).serialize();
+
+// $( "form" ).on( "submit", function( event ) {
+//   event.preventDefault();
+//   console.log( $( this ).serialize() );
+// });
+// encode a set of form elements as a string for submission
 
 
+// .load( url [, data ] [, complete ] )
+// $( "#result" ).load( "ajax/test.html" );
+// Load data from the server and place the returned HTML into the matched elements.
+// is roughly equivalent to $.get(url, data, success)
+
+// $( "#result" ).load( "ajax/test.html #container" )
+
+// allows us to specify (in the url parameter) a portion of the remote document to be inserted 
